@@ -109,6 +109,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
+-define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -353,6 +354,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/AgentProjectile.cs"
+"Assets/Scripts/BehaviorTree/Actions/ChasePlayerSetDestination.cs"
 "Assets/Scripts/BehaviorTree/Actions/MoveDirection.cs"
 "Assets/Scripts/BehaviorTree/Actions/SpawnProjectile.cs"
 "Assets/Scripts/BehaviorTree/Actions/WanderSetDestination.cs"
@@ -362,6 +364,7 @@
 "Assets/Scripts/BehaviorTree/Conditions/AgentHasAmmo.cs"
 "Assets/Scripts/BehaviorTree/Conditions/PlayerInRange.cs"
 "Assets/Scripts/BehaviorTree/Operators/InverterNode.cs"
+"Assets/Scripts/BehaviorTree/Operators/Parallel.cs"
 "Assets/Scripts/BehaviorTree/Operators/RandomSelector.cs"
 "Assets/Scripts/BehaviorTree/Operators/RandomSequence.cs"
 "Assets/Scripts/BehaviorTree/Operators/SelectorNode.cs"

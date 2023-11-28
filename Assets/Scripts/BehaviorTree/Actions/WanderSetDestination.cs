@@ -11,8 +11,11 @@ public class WanderSetDestination : BehaviorTreeNode
 
     public override bool Run()
     {
-        
+        float x = Random.Range(-40, 40);
+        float z = Random.Range(-40, 40);
 
+        Vector3 destination = new Vector3(x, 0, z);
+        agent.moveTo = destination;
 
         return true;
     }

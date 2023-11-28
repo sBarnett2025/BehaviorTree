@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class SequenceNode : BehaviorTreeNode
 {
-    BehaviorTreeNode[] children;
+    public List<BehaviorTreeNode> children = new List<BehaviorTreeNode>();
 
     public override void Start()
     {
-        agent = transform.root.GetComponent<Agent>();
-        children = GetComponentsInChildren<BehaviorTreeNode>();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            children.Add(transform.GetChild(i).GetComponent<BehaviorTreeNode>());
+        }
     }
 
     public override bool Run()
     {
-        for (int i = 0; i < children.Length; i++)
+        for (int i = 0; i < children.Count; i++)
         {
-            if (children[i].Run())
+            if (!children[i].Run())
             {
                 return false;
             }
         }
+
         return true;
     }
 }

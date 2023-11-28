@@ -14,7 +14,7 @@ public class BehaviorTreeNode : MonoBehaviour
 
     public virtual bool Run()
     {
-        Debug.Log("Empty Node");
+        Debug.LogError("Empty Node");
         return false;
     }
 }
