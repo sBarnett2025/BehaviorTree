@@ -15,6 +15,10 @@ public class Agent : MonoBehaviour
 
     public GameObject projectilePrefab;
     public float projectileSpeed;
+
+    public float shotRechargeTime;
+    public float timeSinceShot;
+
     public int ammo;
     
 
@@ -33,6 +37,10 @@ public class Agent : MonoBehaviour
         float msec = Time.deltaTime * 1000.0f;
         float fps = 1.0f / Time.deltaTime;
         string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
-        //Debug.Log(text);
+        Debug.Log(text);
+
+        Vector3 dir = playerPosition.position - transform.position;
+        Debug.DrawRay(transform.position, dir, Color.black);
+
     }
 }

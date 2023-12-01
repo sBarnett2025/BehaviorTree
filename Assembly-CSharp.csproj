@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\BehaviorTree\BehaviorTreeNode.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Operators\RandomSelector.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Conditions\AgentAtDestination.cs" />
+    <Compile Include="Assets\Scripts\BehaviorTree\Conditions\AgentTimeSinceShot.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

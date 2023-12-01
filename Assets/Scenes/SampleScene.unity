@@ -1090,7 +1090,9 @@ MonoBehaviour:
   moveDistance: 10
   projectilePrefab: {fileID: 8471592953067949722, guid: d3d1223545dc02e4a95b995b57036ba3, type: 3}
   projectileSpeed: 15
-  ammo: 0
+  shotRechargeTime: 0
+  timeSinceShot: 0
+  ammo: 10000
 --- !u!1001 &1215304604
 PrefabInstance:
   m_ObjectHideFlags: 0
