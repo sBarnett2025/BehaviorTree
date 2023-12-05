@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BehaviorTreeNode : MonoBehaviour
 {
-    protected Agent agent;
+    public Agent agent;
 
     // Start is called before the first frame update
     public virtual void Start()

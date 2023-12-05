@@ -20,6 +20,7 @@ public class SpawnProjectile : BehaviorTreeNode
         projectile.moveSpeed = agent.projectileSpeed;
 
         agent.ammo -= 1;
+        agent.timeSinceShot = 0;
 
         return true;
     }

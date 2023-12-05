@@ -16,6 +16,8 @@ public class AgentTimeSinceShot : BehaviorTreeNode
             return true;
         }
 
+        agent.timeSinceShot += Time.deltaTime;
+
         return false;
     }
 }

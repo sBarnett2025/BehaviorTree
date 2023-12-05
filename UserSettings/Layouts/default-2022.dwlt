@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 108
+  controlID: 111
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 42
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 43
+  controlID: 19
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 899
     height: 513
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -519,7 +519,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/BehaviorTree/Operators
+    - Assets/Scripts/BehaviorTree/Conditions
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -527,16 +527,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/BehaviorTree/Operators
+  - Assets/Scripts/BehaviorTree/Conditions
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\samuel.barnett\Documents\repos\BehaviorTree
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a1e0000
-    m_LastClickedID: 7770
-    m_ExpandedIDs: 000000002e1e00003a1e00003e1e0000421e0000dc5a000000ca9a3bffffff7f
+    m_SelectedIDs: 5c5a0000
+    m_LastClickedID: 23132
+    m_ExpandedIDs: 000000002c5a0000385a0000585a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -564,7 +564,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000dc5a0000
+    m_ExpandedIDs: 000000002c5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -704,9 +704,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: aa690000
+      m_SelectedIDs: 44620000
       m_LastClickedID: 0
-      m_ExpandedIDs: d8f7ffffdaf7ffff365a0000
+      m_ExpandedIDs: fefaffff22fbffff26fbffff30fbffff6459000090590000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1099,9 +1099,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.2913895, y: 1.6948707, z: 4.6417584}
+    m_Target: {x: -5.1809354, y: -0.81730306, z: 14.408814}
     speed: 2
-    m_Value: {x: -4.2913895, y: 1.6948707, z: 4.6417584}
+    m_Value: {x: -5.1809354, y: -0.81730306, z: 14.408814}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1147,13 +1147,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.19919433, y: 0.1859821, z: -0.038537975, w: -0.96136147}
+    m_Target: {x: -0.19596744, y: -0.10070738, z: 0.02023459, w: -0.97519976}
     speed: 2
-    m_Value: {x: -0.19919744, y: 0.185985, z: -0.03853858, w: -0.9613765}
+    m_Value: {x: -0.19597045, y: -0.10070893, z: 0.020234901, w: -0.9752148}
   m_Size:
-    m_Target: 17.414965
+    m_Target: 30.884613
     speed: 2
-    m_Value: 17.414965
+    m_Value: 30.884613
   m_Ortho:
     m_Target: 0
     speed: 2
