@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: {fileID: 0}
-  detectionRadius: 15
+  detectionRadius: 20
   playerPosition: {fileID: 821514296}
   moveTo: {x: 0, y: 0, z: 0}
   moveDistance: 10
@@ -1667,6 +1667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba1fc73faf411247a1472c7037563cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 0}
 --- !u!1001 &1709109129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1835,6 +1836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba1fc73faf411247a1472c7037563cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 0}
 --- !u!1001 &3303904301013296941
 PrefabInstance:
   m_ObjectHideFlags: 0
