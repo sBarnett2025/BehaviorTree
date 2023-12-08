@@ -359,6 +359,7 @@
 "Assets/Scripts/BehaviorTree/Actions/SpawnProjectile.cs"
 "Assets/Scripts/BehaviorTree/Actions/WanderSetDestination.cs"
 "Assets/Scripts/BehaviorTree/Agent.cs"
+"Assets/Scripts/BehaviorTree/AgentController.cs"
 "Assets/Scripts/BehaviorTree/BehaviorTreeNode.cs"
 "Assets/Scripts/BehaviorTree/Conditions/AgentAtDestination.cs"
 "Assets/Scripts/BehaviorTree/Conditions/AgentHasAmmo.cs"

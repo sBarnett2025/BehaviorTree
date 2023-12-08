@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\BehaviorTree\Conditions\PlayerInRange.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Operators\RandomSequence.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Operators\SelectorNode.cs" />
+    <Compile Include="Assets\Scripts\BehaviorTree\AgentController.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Operators\SequenceNode.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Actions\WanderSetDestination.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Actions\MoveDirection.cs" />

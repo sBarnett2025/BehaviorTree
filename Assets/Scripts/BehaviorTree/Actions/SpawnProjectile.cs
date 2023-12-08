@@ -15,7 +15,7 @@ public class SpawnProjectile : BehaviorTreeNode
         GameObject obj = Instantiate(agent.projectilePrefab, transform.position, Quaternion.identity);
         AgentProjectile projectile = obj.GetComponent<AgentProjectile>();
 
-        Vector3 playerPos = new Vector3(agent.playerPosition.position.x, agent.playerPosition.position.y, agent.playerPosition.position.z);
+        Vector3 playerPos = new Vector3(agent.playerPosition.x, agent.playerPosition.y, agent.playerPosition.z);
         projectile.moveDirection = (playerPos - transform.position).normalized;
         projectile.moveSpeed = agent.projectileSpeed;
 

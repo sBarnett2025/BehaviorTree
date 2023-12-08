@@ -11,7 +11,7 @@ public class ChasePlayerSetDestination : BehaviorTreeNode
 
     public override bool Run()
     {
-        agent.moveTo = agent.playerPosition.position;
+        agent.moveTo = agent.playerPosition;
 
         return true;
     }

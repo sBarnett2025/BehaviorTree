@@ -11,7 +11,7 @@ public class PlayerInRange : BehaviorTreeNode
 
     public override bool Run()
     {
-        Vector3 playerPos = new Vector3(agent.playerPosition.position.x, agent.playerPosition.position.y, agent.playerPosition.position.z);
+        Vector3 playerPos = new Vector3(agent.playerPosition.x, agent.playerPosition.y, agent.playerPosition.z);
         if ((playerPos - agent.transform.position).magnitude < agent.detectionRadius)
         {
             //Debug.Log("Player In Range");
