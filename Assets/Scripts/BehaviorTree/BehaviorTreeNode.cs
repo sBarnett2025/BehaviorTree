@@ -17,4 +17,12 @@ public class BehaviorTreeNode : MonoBehaviour
         Debug.LogError("Empty Node");
         return false;
     }
+
+    public virtual void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
+    }
 }

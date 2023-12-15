@@ -17,7 +17,7 @@ public class AgentProjectile : MonoBehaviour
 
     void DeleteIfOutside()
     {
-        if (transform.position.x > 40 || transform.position.x < -40 || transform.position.z > 40 || transform.position.z < -40)
+        if (transform.position.x > 80 || transform.position.x < -80 || transform.position.z > 80 || transform.position.z < -80)
         {
             Destroy(gameObject);
         }

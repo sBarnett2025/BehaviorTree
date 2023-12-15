@@ -8,9 +8,11 @@ public class SequenceNode : BehaviorTreeNode
 
     public override void Start()
     {
+
         for (int i = 0; i < transform.childCount; i++)
         {
             children.Add(transform.GetChild(i).GetComponent<BehaviorTreeNode>());
+            //children[i].Start();
         }
     }
 
@@ -25,5 +27,18 @@ public class SequenceNode : BehaviorTreeNode
         }
 
         return true;
+    }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
+
+        foreach (BehaviorTreeNode child in children)
+        {
+            child.Setup();
+        }
     }
 }

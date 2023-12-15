@@ -6,7 +6,7 @@ public class AgentHasAmmo : BehaviorTreeNode
 {
     public override void Start()
     {
-        agent = transform.root.GetComponent<Agent>();
+        
     }
 
     public override bool Run()
@@ -20,4 +20,13 @@ public class AgentHasAmmo : BehaviorTreeNode
         //Debug.Log("Does Not Has Ammo");
         return false;
     }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
+    }
+
 }

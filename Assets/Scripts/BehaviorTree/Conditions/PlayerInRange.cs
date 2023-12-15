@@ -4,20 +4,36 @@ using UnityEngine;
 
 public class PlayerInRange : BehaviorTreeNode
 {
+    AgentController controller;
     public override void Start()
     {
-        agent = transform.root.GetComponent<Agent>();
+        
+
+        controller = transform.root.GetComponent<AgentController>();
     }
 
     public override bool Run()
     {
-        Vector3 playerPos = new Vector3(agent.playerPosition.x, agent.playerPosition.y, agent.playerPosition.z);
-        if ((playerPos - agent.transform.position).magnitude < agent.detectionRadius)
+        foreach (Agent a in controller.agents)
         {
-            //Debug.Log("Player In Range");
-            return true;
+            Vector3 playerPos = new Vector3(a.playerPosition.x, a.playerPosition.y, a.playerPosition.z);
+            if ((playerPos - a.transform.position).magnitude < a.detectionRadius)
+            {
+                //Debug.Log("Player In Range");
+                return true;
+            }
         }
+        
         //Debug.Log("Player Not In Range");
         return false;
     }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
+    }
+
 }

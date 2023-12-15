@@ -1,9 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveDirection : BehaviorTreeNode
 {
+    public override void Start()
+    {
+        
+    }
+
+
     public override bool Run()
     {
 
@@ -19,5 +26,13 @@ public class MoveDirection : BehaviorTreeNode
         }
 
         return true;
+    }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
     }
 }

@@ -8,7 +8,6 @@ public class RandomSelector : BehaviorTreeNode
 
     public override void Start()
     {
-        agent = transform.root.GetComponent<Agent>();
         children = GetComponentsInChildren<BehaviorTreeNode>();
     }
 

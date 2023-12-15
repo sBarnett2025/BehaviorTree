@@ -6,7 +6,7 @@ public class ChasePlayerSetDestination : BehaviorTreeNode
 {
     public override void Start()
     {
-        agent = transform.root.GetComponent<Agent>();
+        
     }
 
     public override bool Run()
@@ -14,5 +14,13 @@ public class ChasePlayerSetDestination : BehaviorTreeNode
         agent.moveTo = agent.playerPosition;
 
         return true;
+    }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
     }
 }

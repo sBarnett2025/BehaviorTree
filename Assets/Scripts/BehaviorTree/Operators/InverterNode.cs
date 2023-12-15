@@ -5,7 +5,7 @@ using static Unity.VisualScripting.Metadata;
 
 public class InverterNode : BehaviorTreeNode
 {
-    BehaviorTreeNode child;
+    public BehaviorTreeNode child;
 
     public override void Start()
     {
@@ -15,5 +15,14 @@ public class InverterNode : BehaviorTreeNode
     public override bool Run()
     {
         return (!child.Run());
+    }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
+        child.Setup();
     }
 }

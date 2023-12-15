@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,16 +8,16 @@ public class SpawnProjectile : BehaviorTreeNode
 {
     public override void Start()
     {
-        agent = transform.root.GetComponent<Agent>();
+        
     }
 
     public override bool Run()
     {
-        GameObject obj = Instantiate(agent.projectilePrefab, transform.position, Quaternion.identity);
+        GameObject obj = Instantiate(agent.projectilePrefab, agent.transform.position, Quaternion.identity);
         AgentProjectile projectile = obj.GetComponent<AgentProjectile>();
 
         Vector3 playerPos = new Vector3(agent.playerPosition.x, agent.playerPosition.y, agent.playerPosition.z);
-        projectile.moveDirection = (playerPos - transform.position).normalized;
+        projectile.moveDirection = (playerPos - agent.transform.position).normalized;
         projectile.moveSpeed = agent.projectileSpeed;
 
         agent.ammo -= 1;
@@ -24,4 +25,13 @@ public class SpawnProjectile : BehaviorTreeNode
 
         return true;
     }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
+    }
+
 }

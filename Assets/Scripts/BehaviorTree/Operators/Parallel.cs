@@ -13,6 +13,7 @@ public class Parallel : BehaviorTreeNode
         {
             children.Add(transform.GetChild(i).GetComponent<BehaviorTreeNode>());
         }
+
     }
 
     public override bool Run()

@@ -26,4 +26,17 @@ public class SelectorNode : BehaviorTreeNode
         
         return false;
     }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
+
+        foreach (BehaviorTreeNode child in children)
+        {
+            child.Setup();
+        }
+    }
 }

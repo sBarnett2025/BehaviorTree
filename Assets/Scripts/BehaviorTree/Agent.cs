@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
+    Player player;
+
     // behavior variables-----
     public float detectionRadius;
     public Vector3 playerPosition;
@@ -24,13 +26,13 @@ public class Agent : MonoBehaviour
     void Start()
     {
         transform.GetChild(0).localScale = new Vector3(detectionRadius * 2, detectionRadius * 2, detectionRadius * 2);
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        playerPosition = player.gameObject.transform.position;
 
         Vector3 dir = playerPosition - transform.position;
         Debug.DrawRay(transform.position, dir, Color.black);

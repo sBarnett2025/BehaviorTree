@@ -6,7 +6,7 @@ public class AgentAtDestination : BehaviorTreeNode
 {
     public override void Start()
     {
-        agent = transform.root.GetComponent<Agent>();
+        
     }
 
     public override bool Run()
@@ -18,5 +18,13 @@ public class AgentAtDestination : BehaviorTreeNode
         }
         //Debug.Log("Agent Not At Destination");
         return false;
+    }
+
+    public override void Setup()
+    {
+        if (transform.parent.GetComponent<BehaviorTreeNode>().agent != null)
+        {
+            agent = transform.parent.GetComponent<BehaviorTreeNode>().agent;
+        }
     }
 }
